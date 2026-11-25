@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+
+# your own pictures stay local; only the sample is tracked
+image/**
+!image/*/
+!image/320x1480/test-pattern.png

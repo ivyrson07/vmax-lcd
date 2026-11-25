@@ -1,0 +1,5 @@
+# HL VMAX PC-case LCD (33c3:f101)
+# Must sort before 73-seat-late.rules or the uaccess tag is ignored.
+# - give the logged-in user access to the serial port (no dialout group needed)
+# - stop ModemManager from probing it as a modem
+SUBSYSTEM=="tty", ATTRS{idVendor}=="33c3", ATTRS{idProduct}=="f101", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="vmax-lcd"
